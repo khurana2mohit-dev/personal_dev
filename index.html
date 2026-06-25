@@ -4,11 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohit & Monika | Roka Ceremony</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<title>Mohit ❤️ Monika | Roka Ceremony</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -17,122 +19,154 @@ box-sizing:border-box;
 
 body{
 font-family:Poppins,sans-serif;
-background:linear-gradient(135deg,#fff7f0,#fdeee7,#fff7f0);
-overflow-x:hidden;
-color:#4b3b35;
-}
-
-.hero{
+background:linear-gradient(135deg,#fff8f4,#fff1eb);
+overflow:hidden;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
 }
 
 .card{
-background:rgba(255,255,255,.55);
-backdrop-filter:blur(18px);
-padding:50px 35px;
-border-radius:30px;
-text-align:center;
+width:90%;
 max-width:700px;
-width:100%;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-animation:fadeIn 2s ease;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:30px;
+box-shadow:0 20px 60px rgba(0,0,0,.12);
+text-align:center;
+animation:fadeIn 1.5s ease;
+z-index:2;
 }
 
 .invite{
-letter-spacing:4px;
-font-size:14px;
+letter-spacing:3px;
 text-transform:uppercase;
-color:#b08d57;
+color:#b88a44;
+font-size:13px;
 }
 
-h1{
+.names{
 font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-font-weight:700;
-margin-top:20px;
+font-size:4rem;
 color:#8b5e3c;
+margin-top:15px;
+animation:slideUp 1.5s ease;
 }
 
 .and{
 font-size:2rem;
-margin:10px 0;
-color:#b08d57;
+color:#b88a44;
 }
 
-.subtitle{
-margin-top:20px;
-font-size:1.1rem;
-line-height:1.8;
+.icon{
+font-size:70px;
+margin:20px 0;
+animation:pulse 2s infinite;
 }
 
 .details{
-margin-top:30px;
-line-height:2.2;
+line-height:2;
 font-size:1.1rem;
+margin-top:20px;
+color:#444;
 }
 
 .countdown{
-margin-top:35px;
-font-size:1.6rem;
+margin-top:25px;
+font-size:1.4rem;
 font-weight:600;
-color:#a76a4d;
+color:#a45b3f;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
+margin-top:25px;
 padding:14px 28px;
 border-radius:50px;
-text-decoration:none;
-background:#b08d57;
+background:#b88a44;
 color:white;
+text-decoration:none;
 font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
+animation:glow 2s infinite alternate;
 }
 
 .quote{
-margin-top:35px;
+margin-top:25px;
 font-style:italic;
-font-size:1rem;
+color:#666;
 }
 
-.flower{
-position:fixed;
+.heart{
+position:absolute;
 font-size:24px;
-animation:float 12s linear infinite;
-opacity:.25;
+opacity:.3;
+color:#ff8fa3;
+animation:float linear infinite;
+}
+
+.h1{left:10%;animation-duration:10s;}
+.h2{left:30%;animation-duration:14s;}
+.h3{left:50%;animation-duration:12s;}
+.h4{left:70%;animation-duration:15s;}
+.h5{left:90%;animation-duration:11s;}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-100px);
+}
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.15);
+}
 }
 
 @keyframes fadeIn{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
 }
 
-@keyframes float{
-0%{transform:translateY(100vh);}
-100%{transform:translateY(-120px);}
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(30px);
 }
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes glow{
+from{
+box-shadow:0 0 5px #d4af37;
+}
+to{
+box-shadow:0 0 25px #d4af37;
+}
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="flower" style="left:10%">🌸</div>
-<div class="flower" style="left:30%;animation-delay:2s">🌸</div>
-<div class="flower" style="left:50%;animation-delay:4s">🌸</div>
-<div class="flower" style="left:70%;animation-delay:6s">🌸</div>
-<div class="flower" style="left:90%;animation-delay:8s">🌸</div>
-
-<section class="hero">
+<div class="heart h1">❤</div>
+<div class="heart h2">❤</div>
+<div class="heart h3">❤</div>
+<div class="heart h4">❤</div>
+<div class="heart h5">❤</div>
 
 <div class="card">
 
@@ -140,21 +174,25 @@ to{opacity:1;transform:translateY(0);}
 Together With Their Families
 </div>
 
-<h1>Mohit</h1>
+<div class="icon">💍</div>
+
+<div class="names">
+Mohit Makkar
+</div>
 
 <div class="and">&</div>
 
-<h1>Monika</h1>
-
-<div class="subtitle">
-Request the pleasure of your presence<br>
-at their Roka Ceremony
+<div class="names">
+Monika Godara
 </div>
 
 <div class="details">
+Roka Ceremony<br><br>
+
 📅 27 June 2026<br>
 🕠 05:30 PM Onwards<br>
 📍 Club House, New Chandigarh
+
 </div>
 
 <div id="countdown" class="countdown"></div>
@@ -170,21 +208,23 @@ View Venue </a>
 
 </div>
 
-</section>
-
 <script>
+
 const eventDate = new Date("June 27, 2026 17:30:00").getTime();
 
 setInterval(() => {
+
 const now = new Date().getTime();
 const distance = eventDate - now;
 
-const days = Math.floor(distance / (1000*60*60*24));
-const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 
 document.getElementById("countdown").innerHTML =
-days + " Days • " + hours + " Hours Remaining";
+"⏳ " + days + " Days " + hours + " Hours Remaining";
+
 },1000);
+
 </script>
 
 </body>
