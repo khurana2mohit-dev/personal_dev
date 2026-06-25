@@ -4,68 +4,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roka Ceremony</title>
+<title>Mohit & Monika | Roka Ceremony</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#fff8f0,#ffe4e1);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#fff7f0,#fdeee7,#fff7f0);
+overflow-x:hidden;
+color:#4b3b35;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
 .card{
-    background:white;
-    width:90%;
-    max-width:700px;
-    padding:50px 30px;
-    text-align:center;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+background:rgba(255,255,255,.55);
+backdrop-filter:blur(18px);
+padding:50px 35px;
+border-radius:30px;
+text-align:center;
+max-width:700px;
+width:100%;
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+animation:fadeIn 2s ease;
 }
 
-.tag{
-    color:#c47b63;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    font-size:14px;
+.invite{
+letter-spacing:4px;
+font-size:14px;
+text-transform:uppercase;
+color:#b08d57;
 }
 
 h1{
-    font-size:3rem;
-    margin:20px 0;
-    color:#333;
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+font-weight:700;
+margin-top:20px;
+color:#8b5e3c;
 }
 
-.names{
-    font-size:2rem;
-    color:#b76e79;
-    font-weight:600;
+.and{
+font-size:2rem;
+margin:10px 0;
+color:#b08d57;
+}
+
+.subtitle{
+margin-top:20px;
+font-size:1.1rem;
+line-height:1.8;
 }
 
 .details{
-    margin-top:30px;
-    line-height:2;
-    color:#555;
-    font-size:1.1rem;
+margin-top:30px;
+line-height:2.2;
+font-size:1.1rem;
 }
 
-.button{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 24px;
-    background:#b76e79;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
+.countdown{
+margin-top:35px;
+font-size:1.6rem;
+font-weight:600;
+color:#a76a4d;
 }
 
-.footer{
-    margin-top:30px;
-    color:#777;
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+border-radius:50px;
+text-decoration:none;
+background:#b08d57;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.quote{
+margin-top:35px;
+font-style:italic;
+font-size:1rem;
+}
+
+.flower{
+position:fixed;
+font-size:24px;
+animation:float 12s linear infinite;
+opacity:.25;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-120px);}
 }
 </style>
 
@@ -73,32 +126,66 @@ h1{
 
 <body>
 
+<div class="flower" style="left:10%">🌸</div>
+<div class="flower" style="left:30%;animation-delay:2s">🌸</div>
+<div class="flower" style="left:50%;animation-delay:4s">🌸</div>
+<div class="flower" style="left:70%;animation-delay:6s">🌸</div>
+<div class="flower" style="left:90%;animation-delay:8s">🌸</div>
+
+<section class="hero">
+
 <div class="card">
-    <div class="tag">You're Invited</div>
 
-```
-<h1>💍 Roka Ceremony</h1>
+<div class="invite">
+Together With Their Families
+</div>
 
-<div class="names">
-    Aarav ❤️ Ananya
+<h1>Mohit</h1>
+
+<div class="and">&</div>
+
+<h1>Monika</h1>
+
+<div class="subtitle">
+Request the pleasure of your presence<br>
+at their Roka Ceremony
 </div>
 
 <div class="details">
-    📅 15 December 2026<br>
-    ⏰ 6:00 PM Onwards<br>
-    📍 Royal Heritage Palace, Jaipur
+📅 27 June 2026<br>
+🕠 05:30 PM Onwards<br>
+📍 Club House, New Chandigarh
 </div>
 
-<a class="button" href="https://maps.google.com" target="_blank">
-    View Location
-</a>
+<div id="countdown" class="countdown"></div>
 
-<div class="footer">
-    We request the pleasure of your presence and blessings.
+<a class="btn"
+href="https://maps.google.com/?q=New+Chandigarh"
+target="_blank">
+View Venue </a>
+
+<div class="quote">
+"Two hearts, one promise, a lifetime together."
 </div>
-```
 
 </div>
+
+</section>
+
+<script>
+const eventDate = new Date("June 27, 2026 17:30:00").getTime();
+
+setInterval(() => {
+const now = new Date().getTime();
+const distance = eventDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+
+document.getElementById("countdown").innerHTML =
+days + " Days • " + hours + " Hours Remaining";
+},1000);
+</script>
 
 </body>
 </html>
