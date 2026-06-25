@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roka Ceremony Invitation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fff5e6, #ffe0e0);
+            text-align: center;
+            color: #333;
+        }
+
+        .hero {
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #b76e79;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+
+        .details {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        .countdown {
+            margin-top: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #b76e79;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #b76e79;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            background: rgba(255,255,255,0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>💍 Roka Ceremony</h1>
+
+    <h2>Aarav ❤️ Ananya</h2>
+
+    <div class="details">
+        <p>📅 15 December 2026</p>
+        <p>⏰ 6:00 PM Onwards</p>
+        <p>📍 Royal Heritage Palace, Jaipur</p>
+    </div>
+
+    <div class="countdown" id="countdown"></div>
+
+    <a class="map-btn"
+       href="https://maps.google.com"
+       target="_blank">
+       View Location
+    </a>
+</div>
+
+<footer>
+    We would be delighted by your presence and blessings.
+</footer>
+
+<script>
+    const eventDate = new Date("December 15, 2026 18:00:00").getTime();
+
+    setInterval(() => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
+                     / (1000 * 60 * 60));
+
+        document.getElementById("countdown").innerHTML =
+            days + " Days " + hours + " Hours Remaining";
+    }, 1000);
+</script>
+
+</body>
+</html>
