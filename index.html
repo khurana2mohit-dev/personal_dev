@@ -23,7 +23,7 @@ color:#4b3b35;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -56,7 +56,7 @@ font-size:1rem;
 line-height:1.8;
 font-style:italic;
 color:#7d6a58;
-max-width:500px;
+max-width:520px;
 margin-left:auto;
 margin-right:auto;
 }
@@ -89,7 +89,7 @@ font-size:1.1rem;
 
 .countdown{
 margin-top:35px;
-font-size:1.6rem;
+font-size:1.3rem;
 font-weight:600;
 color:#a76a4d;
 }
@@ -124,13 +124,23 @@ opacity:.25;
 }
 
 @keyframes fadeIn{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 @keyframes float{
-0%{transform:translateY(100vh);}
-100%{transform:translateY(-120px);}
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120px);
+}
 }
 </style>
 
@@ -153,8 +163,8 @@ Together With Their Families
 </div>
 
 <div class="quote-top">
-Every love story is beautiful,<br>
-but ours is about to become our favorite.
+With joy in our hearts and blessings from our families,<br>
+we invite you to celebrate this special beginning with us.
 </div>
 
 <h1>Mohit</h1>
@@ -193,15 +203,39 @@ View Venue </a>
 const eventDate = new Date("June 27, 2026 17:30:00").getTime();
 
 setInterval(() => {
+
 const now = new Date().getTime();
 const distance = eventDate - now;
 
-const days = Math.floor(distance / (1000*60*60*24));
-const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+const hours = Math.floor(
+(distance % (1000 * 60 * 60 * 24)) /
+(1000 * 60 * 60)
+);
+
+const minutes = Math.floor(
+(distance % (1000 * 60 * 60)) /
+(1000 * 60)
+);
+
+const seconds = Math.floor(
+(distance % (1000 * 60)) / 1000
+);
 
 document.getElementById("countdown").innerHTML =
-days + " Days • " + hours + " Hours Remaining";
-},1000);
+"⏳ " +
+days + " Days • " +
+hours + " Hours • " +
+minutes + " Minutes • " +
+seconds + " Seconds";
+
+if (distance < 0) {
+document.getElementById("countdown").innerHTML =
+"🎉 The Celebration Has Begun!";
+}
+
+}, 1000);
 </script>
 
 </body>
