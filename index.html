@@ -1,109 +1,104 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roka Ceremony Invitation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roka Ceremony</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#fff8f0,#ffe4e1);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #fff5e6, #ffe0e0);
-            text-align: center;
-            color: #333;
-        }
+.card{
+    background:white;
+    width:90%;
+    max-width:700px;
+    padding:50px 30px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
 
-        .hero {
-            padding: 80px 20px;
-        }
+.tag{
+    color:#c47b63;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:14px;
+}
 
-        h1 {
-            font-size: 3rem;
-            color: #b76e79;
-        }
+h1{
+    font-size:3rem;
+    margin:20px 0;
+    color:#333;
+}
 
-        h2 {
-            margin-top: 20px;
-            font-size: 2rem;
-        }
+.names{
+    font-size:2rem;
+    color:#b76e79;
+    font-weight:600;
+}
 
-        .details {
-            margin-top: 40px;
-            font-size: 1.2rem;
-            line-height: 2;
-        }
+.details{
+    margin-top:30px;
+    line-height:2;
+    color:#555;
+    font-size:1.1rem;
+}
 
-        .countdown {
-            margin-top: 40px;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #b76e79;
-        }
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 24px;
+    background:#b76e79;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+}
 
-        .map-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background: #b76e79;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
+.footer{
+    margin-top:30px;
+    color:#777;
+}
+</style>
 
-        footer {
-            margin-top: 80px;
-            padding: 20px;
-            background: rgba(255,255,255,0.4);
-        }
-    </style>
 </head>
+
 <body>
 
-<div class="hero">
-    <h1>💍 Roka Ceremony</h1>
+<div class="card">
+    <div class="tag">You're Invited</div>
 
-    <h2>Aarav ❤️ Ananya</h2>
+```
+<h1>💍 Roka Ceremony</h1>
 
-    <div class="details">
-        <p>📅 15 December 2026</p>
-        <p>⏰ 6:00 PM Onwards</p>
-        <p>📍 Royal Heritage Palace, Jaipur</p>
-    </div>
-
-    <div class="countdown" id="countdown"></div>
-
-    <a class="map-btn"
-       href="https://maps.google.com"
-       target="_blank">
-       View Location
-    </a>
+<div class="names">
+    Aarav ❤️ Ananya
 </div>
 
-<footer>
-    We would be delighted by your presence and blessings.
-</footer>
+<div class="details">
+    📅 15 December 2026<br>
+    ⏰ 6:00 PM Onwards<br>
+    📍 Royal Heritage Palace, Jaipur
+</div>
 
-<script>
-    const eventDate = new Date("December 15, 2026 18:00:00").getTime();
+<a class="button" href="https://maps.google.com" target="_blank">
+    View Location
+</a>
 
-    setInterval(() => {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+<div class="footer">
+    We request the pleasure of your presence and blessings.
+</div>
+```
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
-                     / (1000 * 60 * 60));
-
-        document.getElementById("countdown").innerHTML =
-            days + " Days " + hours + " Hours Remaining";
-    }, 1000);
-</script>
+</div>
 
 </body>
 </html>
